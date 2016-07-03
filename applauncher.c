@@ -13,7 +13,7 @@ main(int argc, char **argv)
 	}
 
 	if (!strcmp(argv[1], "-bootgame"))
-		execl("sonic.exe", "sonic.exe", NULL);
+		execl("sonicdx.exe", "sonicdx.exe", NULL);
 	else if (!strcmp(argv[1], "-bootlauncher"))
 		execl("SADXModManager.exe", "SADXModManager.exe", NULL);
 	else
