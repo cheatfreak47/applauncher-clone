@@ -4,7 +4,8 @@
 MSYS2_PATH := $(shell echo $$MSYSTEM_PREFIX | sed 's/\\/\//g')
 
 CC = $(MSYS2_PATH)/mingw32/bin/gcc.exe
-CFLAGS = -mwindows -m32
+CFLAGS = -mwindows -m32 -Os -flto
+LDFLAGS = -s -flto
 TARGET = AppLauncher.exe
 SRC = applauncher.c
 
@@ -12,6 +13,7 @@ all: $(TARGET)
 
 $(TARGET): $(SRC)
 	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+	strip $(TARGET)
 
 clean:
 	rm -f $(TARGET)
