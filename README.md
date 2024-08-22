@@ -3,7 +3,7 @@ Made for the BetterSADX project.
 Steam SADX runs in an odd way since the update that added achievements.
 
 The game now launches with one of two possible commands.
-#
+
 `-bootgame` or `-bootlauncher`
 
 This is a simple program that accepts these commands and does what I want when they are passed.
